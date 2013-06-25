@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style type="text/css" >
+body{
+background-color:rgb(0,0,0);
+background-image:url(http://www.zingerbugimages.com/backgrounds/snow_covered_peaks_background_1800x1200.jpg);
+background-position:center center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+button{width: 150px}
+</style>
+<title> 
+Profile
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<div class="hero-unit">
+<script>
+function toggle(e){
+if(e.on){e.className="btn btn-mini btn-primary"
+e.on=false}
+else{e.on=true
+e.className="btn btn-mini btn-success"}
+}
+document.write("<h1>"+ localStorage.username+"</h1>")
+function hideAddressBar(){
+  if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
+    document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+  setTimeout(window.scrollTo(1,1),0);
+}
+window.addEventListener("load",function(){hideAddressBar();});
+window.addEventListener("orientationchange",function(){hideAddressBar();});
+</script>
+</div>
+<form class="navbar-search pull-left">
+<div class="btn-group"> 
+<button class="btn btn-mini btn-primary" type="button">Share</button>
+  <button class="btn btn-mini btn-primary" type="button" onclick="location.href='VID_20130516_124648.mp4'">receive</button>  
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle_scan()">Scan</button>
+  </div>
+  </form>
+  <br>
+  <br>
+  <br>
+  <script>
+  function toggle_scan() {
+	var e = document.getElementById("scan");
+	if (e.on) {
+		e.on = false;
+		e.style.display = 'none';
+	}
+	else {
+		e.on = true;
+		e.style.display = 'block';
+	}
+  }
+  </script>
+  <div id="scan" class="btn-group btn-group-vertical pull-left" style="clear: left; display: none;">
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">IPhone5</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">M865</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">Google Nexus</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">Kindle Fire</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">Joshuua's iPhone</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">Eric's Phone</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">AOL</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">Droid</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">SGH-t39</button>
+<button class="btn btn-mini btn-primary" type="button" onclick="toggle(this)">Goldy</button>
+</div>
+
+</body>
+</html>
